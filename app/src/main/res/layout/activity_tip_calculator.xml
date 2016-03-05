@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <EditText
+        android:id="@+id/edtBillAmount"
+        android:layout_width="150dp"
+        android:layout_height="100px"
+        android:inputType="numberDecimal"
+        android:background="@drawable/edittextstyle"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/edit_bill"
+        android:layout_toEndOf="@+id/edit_bill"
+        android:layout_marginTop="39dp" />
+
+    <TextView
+        android:id="@+id/text_tip"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/tip"
+        android:layout_marginTop="65dp"
+        android:textSize="20dp"
+        android:layout_below="@+id/btnCalculate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/roundToNearest"
+        android:layout_toLeftOf="@+id/roundToNearest" />
+
+    <TextView
+        android:id="@+id/txtTipResult"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/txtTipResult"
+        android:textSize="20dp"
+        android:layout_alignTop="@+id/text_tip"
+        android:layout_toRightOf="@+id/text_tip"
+        android:layout_toEndOf="@+id/text_tip" />
+
+    <TextView
+        android:id="@+id/edit_bill"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/billAmount"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:textSize="25dp"
+        android:textIsSelectable="true"
+        android:layout_alignBottom="@+id/edtBillAmount"
+        android:layout_alignLeft="@+id/chkRound"
+        android:layout_alignStart="@+id/chkRound" />
+
+
+    <TextView
+        android:id="@+id/roundToNearest"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:text="@string/roundToNearest"
+        android:textSize="20dp"
+        android:textStyle="normal"
+        android:textColor="#000000"
+        android:layout_alignBottom="@+id/chkRound"
+        android:layout_toRightOf="@+id/chkRound"
+        android:layout_toEndOf="@+id/chkRound" />
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="400px"
+        android:layout_height="100px"
+        android:onClick="calculate"
+        android:text="@string/calculate"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/roundToNearest"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="37dp" />
+
+    <CheckBox
+        android:id="@+id/chkRound"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginStart="31dp"
+        android:layout_below="@+id/edit_bill"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="33dp" />
+
+</RelativeLayout>
